@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Plant : MonoBehaviour
+public class Plant : MonoBehaviour, ITileOccupant
 {
     [SerializeField, Tooltip("Set the ability usage rate.")]
     protected float abilityUsageRate;

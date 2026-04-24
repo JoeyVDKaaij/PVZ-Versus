@@ -4,13 +4,13 @@ public class Tile : MonoBehaviour
 {
     [Header("Tile Settings")]
     public bool occupied { private set; get; } = false;
-    public GameObject occupiedObj { private set; get; }
+    public ITileOccupant occupiedObj { private set; get; }
 
     [SerializeField, Tooltip("Set the tile type.")]
     private TileType tileType = TileType.Grass;
     public TileType TileType { get { return tileType; } }
 
-    private void Occupy(GameObject pOccupant)
+    private void Occupy(ITileOccupant pOccupant)
     {
         if (pOccupant == null) return;
         
